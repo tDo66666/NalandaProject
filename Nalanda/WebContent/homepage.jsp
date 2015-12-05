@@ -32,7 +32,7 @@
 </head>
 
 <body>
-	<h1>Nalanda</h1>
+	<h1>Hội Phật Học Nalanda</h1>
 	<h4>Buddhism: Learn And Practice</h4>
 	<p>
 		This a website for people to learn about Buddhism.
