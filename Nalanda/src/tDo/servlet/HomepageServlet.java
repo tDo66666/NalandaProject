@@ -1,4 +1,4 @@
-package com.servlet;
+package tDo.servlet;
 
 /* Author: tDo */
 
