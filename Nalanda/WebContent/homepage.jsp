@@ -6,7 +6,9 @@
 <!-- Author: tDo -->
 <html>
 <head>
+<!-- meta http-equiv="Content-Type" content="text/html; charset=UTF-8" -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Nalanda Homepage</title>
 <style>
 	body{
@@ -28,12 +30,17 @@
 		font-family: "Times New Roman";
     	font-size: 20px;
 	}
+	form{
+		text-align: center;
+	}
 </style>
 </head>
 
 <body>
 	<h1>Hội Phật Học Nalanda</h1>
+	
 	<h4>Buddhism: Learn And Practice</h4>
+	
 	<p>
 		This a website for people to learn about Buddhism.
 		<br>
@@ -41,8 +48,18 @@
 		<br>
 		Basic learning. Intermedium learning. Advance learning.
 	</p>
+	
 	<h6>
 		Time and Date: <%  new Date(); %>
 	</h6>
+	
+	<form action="LoginServlet" method="post">
+		Pháp danh : <input type="text" name="user">
+		<br>
+		Mật khẩu : <input type="password" name="pwd">
+		<br>
+		<input type="submit" value="Login">
+	</form>
+	
 </body>
 </html>
