@@ -19,16 +19,17 @@
 		text-align: center;
 	}
 	h4{
-		color: blue;
+		color: navy ;
 		text-align: center;
 	}
 	h6{
-		color: green;
+		color: red;
 		text-align: right;
 	}
 	p{
 		font-family: "Times New Roman";
     	font-size: 20px;
+    	color: yellow;
 	}
 	form{
 		text-align: center;
@@ -54,9 +55,17 @@
 	</h6>
 	
 	<form action="LoginServlet" method="post">
-		Pháp danh : <input type="text" name="user">
+		Họ Tên:* 
 		<br>
-		Mật khẩu : <input type="password" name="pwd">
+		<input type="text" name="username">
+		<br>
+		Pháp danh:* 
+		<br>
+		<input type="text" name="usernickname">
+		<br>
+		Mật khẩu: * 
+		<br>
+		<input type="password" name="pwd">
 		<br>
 		<input type="submit" value="Login">
 	</form>
