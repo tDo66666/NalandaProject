@@ -19,11 +19,12 @@
 		text-align: center;
 	}
 	h4{
-		color: navy ;
+		color: blue ;
 		text-align: center;
 	}
 	h6{
 		color: red;
+		font-size: 22px;
 		text-align: right;
 	}
 	p{
@@ -33,6 +34,9 @@
 	}
 	form{
 		text-align: center;
+		font-family: "Arial";
+    	font-size: 21px;
+    	color: orange;
 	}
 </style>
 </head>
@@ -40,8 +44,8 @@
 <body>
 	<h1>Hội Phật Học Nalanda</h1>
 	
-	<h4>Buddhism: Learn And Practice</h4>
-	
+	<h4>Nalanda, Buddhism Learning Society </h4>
+	<br>
 	<p>
 		This a website for people to learn about Buddhism.
 		<br>
@@ -57,11 +61,11 @@
 	<form action="LoginServlet" method="post">
 		Họ Tên:* 
 		<br>
-		<input type="text" name="username">
+		<input type="text" name="normal_name">
 		<br>
 		Pháp danh:* 
 		<br>
-		<input type="text" name="usernickname">
+		<input type="text" name="dharma_name">
 		<br>
 		Mật khẩu: * 
 		<br>
@@ -69,6 +73,8 @@
 		<br>
 		<input type="submit" value="Login">
 	</form>
+	
+	<a href="LoginSuccess.jsp">Login success page</a>
 	
 </body>
 </html>
