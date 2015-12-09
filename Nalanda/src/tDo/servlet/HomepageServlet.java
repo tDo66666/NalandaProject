@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.Date;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,16 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HomepageServlet
  */
-@WebServlet("/HomepageServlet")
+//@WebServlet("/HomepageServlet")
+@WebServlet(
+			description = "Homepage Servlet",
+			urlPatterns = {"/HomepageServlet"},
+			initParams = {
+					@WebInitParam(name = "user", value = "ToanDo"),
+					@WebInitParam(name = "password", value = "Amidaphat") 
+					}
+			)
+
 public class HomepageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -25,6 +35,15 @@ public class HomepageServlet extends HttpServlet {
     public HomepageServlet() {
         super();
         // TODO Auto-generated constructor stub
+    }
+    public void init() throws ServletException{
+    	// We can create DB connection resource here and set it to Servlet context
+    	if(getServletContext().getInitParameter("dbURL").equals("jdbc:mysql://localhost/mysql_db") &&
+    			getServletContext().getInitParameter("dbUser").equals("mysql_user") && 
+    			getServletContext().getInitParameter("dbUserPwd").equals("mysql_pwd") ){
+    		getServletContext().setAttribute("DB_Success", "True");
+    	}
+    	else throw new ServletException("DB Connection Error");
     }
 
 	/**
@@ -36,8 +55,8 @@ public class HomepageServlet extends HttpServlet {
 		
 		Date date = new Date();
 		
-		PrintWriter out = response.getWriter();
-		out.write("homepage.jsp");
+		//PrintWriter out = response.getWriter();
+		//out.write("homepage.jsp");
 	}
 
 	/**

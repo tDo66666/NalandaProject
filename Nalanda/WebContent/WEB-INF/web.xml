@@ -37,4 +37,5 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
   	<param-name>dbUserPwd</param-name>
   	<param-value>mysql_pwd</param-value>
   </context-param>
+  
 </web-app>
