@@ -55,10 +55,10 @@
 	</p>
 	
 	<h6>
-		Time and Date: <%  new Date(); %>
+		Time and Date: <%= new Date() %>
 	</h6>
 	
-	<form action="LoginServlet" method="post">
+	<form action="HomepageServlet" method="post">
 		Họ Tên:* 
 		<br>
 		<input type="text" name="normal_name">

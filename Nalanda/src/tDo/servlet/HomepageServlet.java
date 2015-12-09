@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 			description = "Homepage Servlet",
 			urlPatterns = {"/HomepageServlet"},
 			initParams = {
-					@WebInitParam(name = "user", value = "ToanDo"),
+					@WebInitParam(name = "user", value = "Giac Duc"),
 					@WebInitParam(name = "password", value = "Amidaphat") 
 					}
 			)
@@ -41,6 +42,7 @@ public class HomepageServlet extends HttpServlet {
     	if(getServletContext().getInitParameter("dbURL").equals("jdbc:mysql://localhost/mysql_db") &&
     			getServletContext().getInitParameter("dbUser").equals("mysql_user") && 
     			getServletContext().getInitParameter("dbUserPwd").equals("mysql_pwd") ){
+    		
     		getServletContext().setAttribute("DB_Success", "True");
     	}
     	else throw new ServletException("DB Connection Error");
@@ -64,7 +66,27 @@ public class HomepageServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		
+		// Get request parameters for user ID and password
+		String dharma_name = request.getParameter("dharma_name");
+		String pwd = request.getParameter("pwd");
+		
+		// Get servlet config init params
+		String userID = getServletConfig().getInitParameter("user");
+		String password = getServletConfig().getInitParameter("password");
+		
+		log("User = "+ dharma_name +" :: password = "+pwd);
+		
+		if(userID.equals(dharma_name) && password.equals(pwd)){
+			response.sendRedirect("LoginSuccess.jsp");
+		}
+		else{
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/homepage.jsp");
+			PrintWriter out = response.getWriter();
+			out.println("<font color=red>Either user or password is wrong! </font>");
+			rd.include(request, response);
+		}
 	}
 
 }
