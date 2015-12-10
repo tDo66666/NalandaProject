@@ -8,8 +8,13 @@
 <head>
 <!-- meta http-equiv="Content-Type" content="text/html; charset=UTF-8" -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
 <title>Nalanda Homepage</title>
+
 <style>
 	body{
 		background-color: white;
@@ -42,18 +47,19 @@
 </head>
 
 <body>
-	<h1>Hội Phật Học Nalanda</h1>
-	
-	<h4>Nalanda, Buddhism Learning Society </h4>
-	<br>
-	<p>
-		This a website for people to learn about Buddhism.
+	<div class="container-fluid">
+		<h1>Hội Phật Học Nalanda</h1>
+		
+		<h4>Nalanda, Buddhism Learning Society </h4>
 		<br>
-		Nalanda history...
-		<br>
-		Basic learning. Intermedium learning. Advance learning.
-	</p>
-	
+		<p>
+			This a website for people to learn about Buddhism.
+			<br>
+			Nalanda history...
+			<br>
+			Basic learning. Intermedium learning. Advance learning.
+		</p>
+	</div>
 	<h6>
 		Time and Date: <%= new Date() %>
 	</h6>
