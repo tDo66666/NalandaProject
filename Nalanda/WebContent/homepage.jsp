@@ -16,8 +16,15 @@
 <title>Nalanda Homepage</title>
 
 <style>
+	html{
+		background: url(files.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+	}
 	body{
-		background-color: white;
+		background: transparent;
 	}
 	h1 {
 		color: orange;
@@ -30,12 +37,13 @@
 	h6{
 		color: red;
 		font-size: 22px;
-		text-align: right;
+		text-align: center;
 	}
 	p{
 		font-family: "Times New Roman";
     	font-size: 20px;
     	color: yellow;
+    	text-align: center;
 	}
 	form{
 		text-align: center;
@@ -43,12 +51,19 @@
     	font-size: 21px;
     	color: orange;
 	}
+	a{
+		text-align: center;
+	}
+	.margin-base-vertical{
+		margin: 100px 0;
+	}
+	
 </style>
 </head>
 
 <body>
-	<div class="container-fluid">
-		<h1>Hội Phật Học Nalanda</h1>
+	<div class="container">
+		<h1 class="margin-base-vertical">Hội Phật Học Nalanda</h1>
 		
 		<h4>Nalanda, Buddhism Learning Society </h4>
 		<br>
@@ -59,28 +74,28 @@
 			<br>
 			Basic learning. Intermedium learning. Advance learning.
 		</p>
+	
+		<h6>
+			Time and Date: <%= new Date() %>
+		</h6>
+		
+		<form action="HomepageServlet" method="post">
+			Họ Tên:* 
+			<br>
+			<input type="text" name="normal_name">
+			<br>
+			Pháp danh:* 
+			<br>
+			<input type="text" name="dharma_name">
+			<br>
+			Mật khẩu: * 
+			<br>
+			<input type="password" name="pwd">
+			<br>
+			<input type="submit" value="Login">
+		</form>
+		
+		<a href="LoginSuccess.jsp">Login success page</a>
 	</div>
-	<h6>
-		Time and Date: <%= new Date() %>
-	</h6>
-	
-	<form action="HomepageServlet" method="post">
-		Họ Tên:* 
-		<br>
-		<input type="text" name="normal_name">
-		<br>
-		Pháp danh:* 
-		<br>
-		<input type="text" name="dharma_name">
-		<br>
-		Mật khẩu: * 
-		<br>
-		<input type="password" name="pwd">
-		<br>
-		<input type="submit" value="Login">
-	</form>
-	
-	<a href="LoginSuccess.jsp">Login success page</a>
-	
 </body>
 </html>
