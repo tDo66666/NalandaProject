@@ -13,15 +13,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
+<link rel="stylesheet" type="text/css" href="homepage_design.css">
+
 <title>Nalanda Homepage</title>
 
 <style>
 	html{
-		background: url(files.jpg) no-repeat center center fixed; 
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
+		background: url(/Images/files.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 	body{
 		background: transparent;
@@ -45,12 +47,7 @@
     	color: yellow;
     	text-align: center;
 	}
-	form{
-		text-align: center;
-		font-family: "Arial";
-    	font-size: 21px;
-    	color: orange;
-	}
+	
 	a{
 		text-align: center;
 	}
