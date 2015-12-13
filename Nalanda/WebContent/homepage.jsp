@@ -19,7 +19,7 @@
 
 <style>
 	html{
-		background: url(/Images/files.jpg) no-repeat center center fixed; 
+		background: url(Images/background_image.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
