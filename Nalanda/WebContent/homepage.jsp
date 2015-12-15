@@ -9,17 +9,18 @@
 <!-- meta http-equiv="Content-Type" content="text/html; charset=UTF-8" -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="Asset/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
-<link rel="stylesheet" type="text/css" href="homepage_design.css">
+<link rel="stylesheet" type="text/css" href="Asset/homepage_design.css">
+<!-- CMS: content management system -->
 
 <title>Nalanda Homepage</title>
 
 <style>
 	html{
-		background: url(Images/background_image.jpg) no-repeat center center fixed; 
+		background: url(Asset/Images/background_image.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -89,7 +90,7 @@
 			<br>
 			<input type="password" name="pwd">
 			<br>
-			<input type="submit" value="Login">
+			<input class="btn btn-default" type="submit" value="Login">
 		</form>
 		
 		<a href="LoginSuccess.jsp">Login success page</a>
