@@ -90,7 +90,7 @@
 			<br>
 			<input type="password" name="pwd">
 			<br>
-			<input class="btn btn-default" type="submit" value="Login">
+			<input class="btn btn-primary btn-lg" type="submit" value="Login">
 		</form>
 		
 		<a href="LoginSuccess.jsp">Login success page</a>

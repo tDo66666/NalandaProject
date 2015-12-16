@@ -10,12 +10,17 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class HomepageServlet
+ */
+
+/* 
+ * Annotations
  */
 //@WebServlet("/HomepageServlet")
 @WebServlet(
@@ -79,6 +84,11 @@ public class HomepageServlet extends HttpServlet {
 		log("User = "+ dharma_name +" :: password = "+pwd);
 		
 		if(userID.equals(dharma_name) && password.equals(pwd)){
+			// Initialise Cookie and set it to expire in 30 mins
+			Cookie loginCookie = new Cookie("dharma_name", dharma_name); // Cookie(String name, String value)
+			loginCookie.setMaxAge(30*60);
+			
+			response.addCookie(loginCookie);
 			response.sendRedirect("LoginSuccess.jsp");
 		}
 		else{

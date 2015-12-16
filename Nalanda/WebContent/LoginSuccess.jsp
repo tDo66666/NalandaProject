@@ -8,7 +8,21 @@
 </head>
 
 <body>
-	<h5>Amidaphat, name!</h5>
+<%
+String userName = null;
+Cookie[] cookies = request.getCookies();
+if(cookies != null){
+	for(Cookie cookie : cookies){
+		if(cookie.getName().equals("dharma_name"))
+			userName = cookie.getValue();
+	}
+}
+if(userName == null) response.sendRedirect("homepage.jsp");
+%>
+	<h3>Amidaphat, <%= userName %>! Login Successful.</h3>
+	<form action="LogoutServlet" method="post">
+		<input class="btn btn-primary btn-lg" type="submit" value="Logout">
+	</form>
 	<a href="homepage.jsp">Home page</a>
 </body>
 </html>
