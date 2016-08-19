@@ -52,20 +52,7 @@ public class HomepageServlet extends HttpServlet {
     	}
     	else throw new ServletException("DB Connection Error");
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		Date date = new Date();
-		
-		//PrintWriter out = response.getWriter();
-		//out.write("homepage.jsp");
-	}
-
+    
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

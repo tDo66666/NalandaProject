@@ -14,13 +14,12 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
 <link rel="stylesheet" type="text/css" href="Asset/homepage_design.css">
-<!-- CMS: content management system -->
 
 <title>Nalanda Homepage</title>
 
 <style>
 	html{
-		background: url(Asset/Images/background_image.jpg) no-repeat center center fixed; 
+		background: url(Asset/Images/CoPGPhapLuan.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -66,11 +65,13 @@
 		<h4>Nalanda, Buddhism Learning Society </h4>
 		<br>
 		<p>
-			This a website for people to learn about Buddhism.
+			This a website for people to learn about Buddhism Dharma.
 			<br>
 			Nalanda history...
 			<br>
-			Basic learning. Intermedium learning. Advance learning.
+			<h5><a href="Basic_learning.html">Basic learning.</a></h5>  
+			<h3><a href="Intermedium_learning.jsp">Intermedium learning.</a></h3>  
+			<h2>Advance learning.</h2>
 		</p>
 	
 		<h6>
